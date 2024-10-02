@@ -27,6 +27,7 @@ public class BookCreateResource {
     @Transactional
     public Response create(Book book) throws CustomException {
         try {
+            System.out.println(book.getTitle());
             Optional<Book> optionalBook = this.bookBookBookCreatePort.create(book);
             if(optionalBook.isEmpty()){
                 return buildErrorResponse(Response.Status.INTERNAL_SERVER_ERROR, "Error creating book");

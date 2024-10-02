@@ -31,9 +31,10 @@ public class BookCreateAdapter implements BookCreatePort<Book, Book> {
             throw new CustomException("Book cannot be null");
         }
 
+        //System.out.print(book.getAuthors().get(0).getUuid());
         ValidationUtil.validateField(book.getTitle(), "The book name cannot be null");
         ValidationUtil.validateString(book.getTitle(), "The name of the book cannot be empty");
-        ValidationUtil.validateField(book.getAuthors(), "The author of the book cannot be");
+        ValidationUtil.validateField(book.getAuthors(), "The author cannot be empty");
         ValidationUtil.validateField(book.getEditorial(), "The editorial cannot be");
         ValidationUtil.validateField(book.getDetailModel(), "The detail model cannot be");
         ValidationUtil.validateField(book.getDescriptionModel(), "Description cannot be null");

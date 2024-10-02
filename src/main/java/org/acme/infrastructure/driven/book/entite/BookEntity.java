@@ -6,7 +6,6 @@ import org.acme.domain.models.Author;
 import org.acme.domain.models.DescriptionModel;
 import org.acme.domain.models.DetailModel;
 import org.acme.domain.models.Editorial;
-import org.hibernate.annotations.JdbcType;
 import org.hibernate.annotations.JdbcTypeCode;
 import org.hibernate.type.SqlTypes;
 
@@ -22,8 +21,7 @@ import java.util.UUID;
 @AllArgsConstructor
 public class BookEntity {
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    private UUID uuid;
+    private UUID uuid = UUID.randomUUID();
 
     private String title;
 
