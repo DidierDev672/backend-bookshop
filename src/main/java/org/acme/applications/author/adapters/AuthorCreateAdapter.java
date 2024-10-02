@@ -1,6 +1,5 @@
 package org.acme.applications.author.adapters;
 
-import lombok.extern.slf4j.Slf4j;
 import org.acme.applications.author.ports.AuthorCreatePort;
 import org.acme.applications.shared.CustomException;
 import org.acme.applications.shared.ValidationUtil;
