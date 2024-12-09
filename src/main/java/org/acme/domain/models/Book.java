@@ -1,12 +1,10 @@
 package org.acme.domain.models;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-
 import java.util.List;
 import java.util.UUID;
 
 public class Book {
+
     private UUID uuid;
     private String title;
     private List<Author> authors;
@@ -17,7 +15,15 @@ public class Book {
 
     public Book() {}
 
-    public Book(UUID uuid, String title, List<Author> authors, Editorial editorial, DetailModel detailModel, DescriptionModel descriptionModel, String photo) {
+    public Book(
+        UUID uuid,
+        String title,
+        List<Author> authors,
+        Editorial editorial,
+        DetailModel detailModel,
+        DescriptionModel descriptionModel,
+        String photo
+    ) {
         this.uuid = uuid;
         this.title = title;
         this.authors = authors;
@@ -27,15 +33,31 @@ public class Book {
         this.photo = photo;
     }
 
-    public static Book init(UUID uuid, String title, List<Author> authors, Editorial editorial, DetailModel detailModel, DescriptionModel descriptionModel, String photo){
-        return new Book(uuid, title, authors, editorial, detailModel, descriptionModel, photo);
+    public static Book init(
+        UUID uuid,
+        String title,
+        List<Author> authors,
+        Editorial editorial,
+        DetailModel detailModel,
+        DescriptionModel descriptionModel,
+        String photo
+    ) {
+        return new Book(
+            uuid,
+            title,
+            authors,
+            editorial,
+            detailModel,
+            descriptionModel,
+            photo
+        );
     }
 
-    public UUID getUuid(){
+    public UUID getUuid() {
         return uuid;
     }
 
-    public void setUuid(UUID uuid){
+    public void setUuid(UUID uuid) {
         this.uuid = uuid;
     }
 

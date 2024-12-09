@@ -1,4 +1,7 @@
 package org.acme.domain.repository;
 
-public interface GenericTwoParametersRepository {
+import java.util.Optional;
+
+public interface GenericTwoParametersRepository <T, W, S>{
+    Optional<S> searchTwoParameters(T parameterOne, W parameterTwo);
 }

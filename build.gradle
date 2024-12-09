@@ -22,8 +22,13 @@ dependencies {
     implementation 'org.mapstruct:mapstruct:1.6.2'
     implementation 'io.quarkus:quarkus-arc'
     implementation 'org.projectlombok:lombok:1.18.28'
-    implementation 'jakarta.enterprise:jakarta.enterprise.cdi-api:3.0.0'
+    implementation 'jakarta.enterprise:jakarta.enterprise.cdi-api:3.0.++0'
     implementation 'javax.enterprise:cdi-api:2.0.SP1'
+    implementation 'de.svenkubiak:jBCrypt:0.4'
+    implementation 'io.smallrye:smallrye-jwt:3.0.0'
+    implementation("io.quarkus:quarkus-smallrye-jwt")
+    implementation("io.quarkus:quarkus-smallrye-jwt-build")
+    implementation("io.quarkus:quarkus-redis-client")
     annotationProcessor "org.projectlombok:lombok:1.18.28"
     testImplementation "org.projectlombok:lombok:1.18.28"
     testAnnotationProcessor "org.projectlombok:lombok:1.18.28"
