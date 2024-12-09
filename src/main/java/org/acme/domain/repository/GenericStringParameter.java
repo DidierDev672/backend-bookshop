@@ -1,4 +1,7 @@
 package org.acme.domain.repository;
 
-public interface GenericStringParameter {
+import java.util.Optional;
+
+public interface GenericStringParameter<T> {
+    Optional<T> stringParameter(String parameter);
 }

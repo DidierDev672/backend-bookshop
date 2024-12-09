@@ -1,4 +1,4 @@
-package org.acme.domain.models;
+package org.acme.domain.models.user;
 
 import java.util.UUID;
 
